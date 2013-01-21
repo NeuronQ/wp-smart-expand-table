@@ -1,0 +1,292 @@
+/* SMART TABLE STYLES */
+
+/* basic smart table styles */
+table.smartx-table {
+    border-collapse: separate;
+}
+.smartx-table-td-inner-wrapper {
+    padding-right: 30px;
+    position: relative;
+}
+
+.smartx-table-tr-hidden,
+.smartx-table-tr-active-hidden,
+.smartx-table-column-hidden,
+th[data-smartx-table-hidden] {
+	display: none;
+}
+.smartx-table-tr-active {
+	height: 90px;
+}
+
+/* rest and more */
+.smartx-table-rest {
+	display: none;
+}
+.smartx-table-tr-active .smartx-table-rest {
+	display: inline;
+}
+.smartx-table-tr-active .smartx-table-more {
+	display: none;
+}
+
+/* spacers */
+.smartx-table-tr-spacer {
+	height: 15px;
+	background: transparent;
+}
+.smartx-table-tr-spacer td {
+	border-left: 0;
+	position: relative;
+	left: 1px;
+	background: white !important;
+}
+
+/* row toolbars */
+.smartx-table-row-toolbar {
+	display: none;
+	position: absolute;
+	top: 50%;
+	right: -4px;
+    margin: -13px 0 0 0;
+    padding: 0 15px 0 0;
+    height: 27px;
+	list-style: none;
+	background: #222;
+    border-radius: 4px;
+}
+.smartx-table-tr-expandable .smartx-table-row-toolbar {
+    right: 29px;
+}
+.smartx-table-tr-active .smartx-table-row-toolbar {
+    top: auto;
+    bottom: -4px;
+    right: -4px;
+    margin: 0;
+    padding-right: 10px;
+}
+.smartx-table-row-toolbar,
+.smartx-table-row-toolbar a,
+.smartx-table-row-toolbar * {
+    color: #eee;
+}
+.smartx-table-row-toolbar li {
+	display: inline-block;
+	margin: 0 0 0 15px;
+	padding: 5px 0 2px 0;
+    line-height: 19px;
+}
+.smartx-table-row-toolbar li:hover,
+.smartx-table-row-toolbar li:hover a,
+.smartx-table-row-toolbar li:hover * {
+	color: rgb(216, 232, 255);
+    text-decoration: none;
+}
+tr:hover .smartx-table-row-toolbar {
+	display: block;
+}
+
+/* fields */
+.smartx-table-fields {
+	width: 100%;
+}
+.smartx-table-fields th {
+	width: 10%;
+    white-space: nowrap;
+}
+.smartx-table-fields th,
+.smartx-table-fields td {
+    border: 0;
+}
+
+/* expand-collapse btns */
+.smartx-table-toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    margin: -14px 0 0 0;
+    padding: 3px 2px 0 2px;
+    height: 23px;
+    width: 22px;
+    text-align: center;
+    box-shadow: none;
+}
+a.smartx-table-toggle-btn:hover {
+    background: transparent;
+}
+.smartx-table-toggle-btn:active,
+.smartx-table-toggle-btn.active {
+    box-shadow: none;
+    border-color: inherit;
+}
+.smartx-table-tr-active .smartx-table-toggle-btn {
+    padding-top: 7px;
+    height: 19px;
+    margin: 0;
+    top: -4px;
+}
+.smartx-table-toggle-btn .smartx-table-collapse-btn {
+    display: none;
+}
+.smartx-table-tr-active .smartx-table-toggle-btn .smartx-table-expand-btn {
+    display: none;
+}
+.smartx-table-tr-active .smartx-table-toggle-btn .smartx-table-collapse-btn {
+    display: block;
+}
+
+
+/* EXTRA */
+
+/* smart table light style */
+.smartx-table-light td:first-child {
+    vertical-align: middle;
+}
+.smartx-table-light .smartx-table-row-toolbar {
+    background: transparent;
+}
+.smartx-table-light .smartx-table-row-toolbar,
+.smartx-table-light .smartx-table-row-toolbar a,
+.smartx-table-light .smartx-table-row-toolbar * {
+    color: #456;
+}
+.smartx-table-light .smartx-table-row-toolbar li,
+.smartx-table-light .smartx-table-row-toolbar li:hover a,
+.smartx-table-light .smartx-table-row-toolbar li:hover * {
+    color: #6BBEF6;
+}
+.smartx-table-light  .smartx-table-toggle-btn {
+    height: 22px;
+    width: 24px;
+    border: 0;
+    padding-top: 6px;
+    background: transparent;
+    color: #234;
+    font-weight: bold;
+}
+
+/* priority bars */
+tr[class*="priority"] > td:first-child {
+    border-left: 8px solid #678;
+}
+tr[class*="priority"].smartx-table-tr-active > td:last-child {
+    border-right: 1px solid #ddd;
+}
+tr.priority-fatal > td:first-child {
+    border-left-color: red;
+}
+tr.priority-error > td:first-child {
+    border-left-color: orange;
+}
+tr.priority-warning > td:first-child {
+    border-left-color: yellow;
+}
+tr.priority-info > td:first-child {
+    border-left-color: blue;
+}
+tr.priority-debug > td:first-child {
+    border-left-color: brown;
+}
+tr.priority-security > td:first-child {
+    border-left-color: violet;
+}
+
+/* table toolbar */
+.table-toolbar .navbar-inner {
+    background: transparent;
+    border-width: 2px 0 0 0;
+    border-style: solid;
+    border-color: #333;
+    box-shadow: none;
+    padding: 0;
+    filter: none;
+}
+.table-toolbar .navbar-inner,
+.table-toolbar .navbar-inner * {
+    color: #455664;
+}
+.table-toolbar .navbar-inner a:hover,
+.table-toolbar .navbar-inner a:hover *,
+.table-toolbar .navbar-inner .btn:hover,
+.table-toolbar .navbar-inner .btn:hover * {
+    color: #6BBEF6;
+}
+.table-toolbar .navbar-inner .divider-vertical {
+    margin: 0;
+    border: 0;
+    width: 25px;
+}
+.table-toolbar .navbar-inner  .nav > li > a,
+.table-toolbar .navbar-inner  .nav > li > .btn {
+    padding: 8px 10px;
+
+}
+.table-toolbar .navbar-inner  .nav > li > a i,
+.table-toolbar .navbar-inner  .nav > li > .btn i {
+    text-shadow: none;
+    font-size: 17px;
+}
+.table-toolbar .navbar-inner  .btn {
+    margin: 0;
+    border: 0;
+    padding: 8px 10px;
+    background: transparent;
+    box-shadow: none;
+    font-size: 13px;
+    filter: none;
+}
+.table-toolbar .navbar-inner  .btn   i {
+    font-size: 17px;
+}
+.table-toolbar .navbar-inner .btn.active, .btn:active {
+    background: #E4F1FC;
+}
+.table-toolbar .navbar-inner .table-toolbar .navbar-search input[type="text"] {
+    border-right: 0;
+    box-shadow: none;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.table-toolbar .navbar-inner .table-toolbar .navbar-search     .input-append .btn {
+    border: 1px solid #ccc;
+    padding: 4px 12px;
+    border-left: 0;
+}
+.table-toolbar .navbar-inner  .btn-group {
+    margin-top: 0;
+}
+.table-toolbar .navbar-inner  .table-toolbar .navbar-text {
+    margin: -2px 5px 0 0;
+}
+.table-toolbar .navbar-inner  .table-toolbar .navbar-text,
+.table-toolbar .navbar-inner  .table-toolbar .navbar-text * {
+    color: #444;
+}
+
+/* pager buttons */
+.pager > ul > li > a {
+    border: 0;
+    border-top: 4px solid #455664;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 21px;
+}
+.pager > ul > li > a:hover {
+    background: transparent;
+    color: #6BBEF6;
+    border-color: #6BBEF6;
+}
+
+
+/* MESSAGE PAGE */
+table.message-fields {
+    width: 100%;
+}
+table.message-fields th {
+    text-align: left;
+    padding-right: 30px;
+    vertical-align: top;
+}
+table.message-fields td {
+    width: 100%;
+}
